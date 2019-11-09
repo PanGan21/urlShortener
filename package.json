@@ -1,0 +1,29 @@
+{
+  "name": "urlshortener",
+  "version": "1.0.0",
+  "description": "URL Shortener",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PanGan21/urlShortener.git"
+  },
+  "author": "Panagiotis Ganelis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PanGan21/urlShortener/issues"
+  },
+  "homepage": "https://github.com/PanGan21/urlShortener#readme",
+  "dependencies": {
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.9",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
