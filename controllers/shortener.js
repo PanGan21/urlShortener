@@ -38,4 +38,12 @@ const encode = (num) => {
     return code;
 }
 
+const decode = (code) => {
+    let num = 0;
+    for (let i = 0; i < code.length; i++) {
+        num *= base + characters.indexOf(code.charAt(i));
+    }
+    return num;
+}
+
 module.exports = { saveUrl };
