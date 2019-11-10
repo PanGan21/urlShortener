@@ -14,7 +14,7 @@ const saveUrl = async (req, res) => {
                 const code = encode(data._id);
                 res.status(200).json({
                     code: code,
-                    link: req.protocol + '://' + '/' + code
+                    link: req.protocol + '://' + req.get('host') + '/' + code
                 });
             }
         })
@@ -25,7 +25,19 @@ const saveUrl = async (req, res) => {
 
 const getUrl = async (req, res) => {
     if (req.params.code) {
-        // todo decode the url
+        const id = decode(req.params.code);
+
+        await LinkSchema.findById(id, (err, link) => {
+            if (err) {
+                return res.status(500).json({ message: 'Server Error', error: err });
+            }
+
+            if (link === null) {
+                return res.status(404).json({ message: 'URL not found' });
+            }
+
+            res.status(200).json(link);
+        })
     }
 }
 
@@ -46,4 +58,4 @@ const decode = (code) => {
     return num;
 }
 
-module.exports = { saveUrl };
+module.exports = { saveUrl, getUrl };
