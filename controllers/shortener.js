@@ -23,6 +23,12 @@ const saveUrl = async (req, res) => {
     }
 }
 
+const getUrl = async (req, res) => {
+    if (req.params.code) {
+        // todo decode the url
+    }
+}
+
 const encode = (num) => {
     let code = '';
     while (num > 0) {
