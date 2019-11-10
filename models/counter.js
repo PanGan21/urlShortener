@@ -12,4 +12,4 @@ const CounterSchema = new Schema({
     }
 })
 
-module.exports = mongoose.model('CounterModel', COunterSchema);
+module.exports = mongoose.model('CounterModel', CounterSchema);
