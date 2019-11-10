@@ -1,7 +1,7 @@
 const express = require('express');
-const router = express.Router;
-const shortenerController = require('../controllers/shortener');
+const router = express.Router();
+const controller = require('../controllers/shortener');
 
-router.post('/', shortenerController.saveUrl);
+router.post('/', controller.saveUrl);
 
 module.exports = router;

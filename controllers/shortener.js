@@ -29,6 +29,7 @@ const encode = (num) => {
         code = characters.charAt(num % base) + code;
         num = Math.floor(num / base);
     }
+    return code;
 }
 
 module.exports = { saveUrl };
