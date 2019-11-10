@@ -8,13 +8,13 @@ const saveUrl = async (req, res) => {
         const link = new LinkSchema(req.body);
         await link.save((err, data) => {
             if (err) {
-                return res.status(500).json({ message: 'Server Error', error: err });
+                return res.status(500).json({ message: 'Server Error', error: err.message });
             }
             if (data) {
                 const code = encode(data._id);
                 res.status(200).json({
                     code: code,
-                    link: req.protocol + '://' + req.get('host') + '/' + code
+                    link: req.protocol + '://' + '/' + code
                 });
             }
         })

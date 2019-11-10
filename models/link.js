@@ -12,15 +12,15 @@ const LinkSchema = new Schema({
     }
 });
 
-LinkSchema.pre('save', async () => {
+LinkSchema.pre('save', function(next){
     const link = this;
-    await CounterSchema.findByIdAndUpdate('count', { $inc: { count: 1 } }, { new: true, upsert: true }, (err, counter) => {
+    CounterSchema.findByIdAndUpdate('linkEntryCount', { $inc: { count: 1 } }, { new: true, upsert: true }, function(err, counter){
         if (err) {
-            return err;
+            return next(err);
         }
         link._id = counter.count;
-    })
-    
-})
+        next();
+    });
+});
 
 module.exports = mongoose.model('LinkModel', LinkSchema);
