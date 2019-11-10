@@ -4,6 +4,7 @@
   "description": "URL Shortener",
   "main": "server.js",
   "scripts": {
+    "test": "jest",
     "start": "node server",
     "server": "nodemon server"
   },
@@ -20,6 +21,7 @@
   "dependencies": {
     "config": "^3.2.4",
     "express": "^4.17.1",
+    "jest": "^24.9.0",
     "mongoose": "^5.7.9",
     "request": "^2.88.0"
   },
