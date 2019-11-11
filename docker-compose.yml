@@ -13,10 +13,6 @@ services:
   mongodb:
     container_name: url-shortener-db
     image: mongo:4.1
-    # volumes:
-    #   - url-shortener-volume:/data/db
-    #   - url-shortener-volume:/data/configdb
-    #   - url-shortener-volume:/data/db:rw
     ports:
       - "27017:27017"
       - "28017:28017"
