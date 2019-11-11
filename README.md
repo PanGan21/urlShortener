@@ -6,10 +6,11 @@
 2. Open the project with an editor.
 3. Change directory to urlShortener.
    `cd urlShortener/`
-4. Run `npm install` to install the dependencies and run the command `npm run server` to start the development server or run `docker-compose up` to use docker.
-5. From Postman or with a `curl` command send a POST request to
+4. Paste the connection string with mongo db in `config/default.json` in the `mongoURI` key.
+5. Run `npm install` to install the dependencies and run the command `npm run server` to start the development server or run `docker-compose up` to use docker.
+6. From Postman or with a `curl` command send a POST request to
    `http://localhost:3000/` with the link you want to shorten into the body for example `"url": "https://github.com/PanGan21"` and the response should be the shortened link.
-6. From Postman or with a `curl` command send a GET request to the shortened link to retrieve the original link.
+7. From Postman or with a `curl` command send a GET request to the shortened link to retrieve the original link.
 
 #### Implementation
 
