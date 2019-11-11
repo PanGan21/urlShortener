@@ -23,3 +23,4 @@
 2. The algorithm used to encode and decode could give us a larger range. The currenct algorithm may break as the entries to the database increase.
 3. When a URL is inserted to the database, a pre hook is fired which updating the database. These two database operations may not scale under heavy load.
 4. A better approach could be adding the date of the link creation in the database and the expiration date of the link.
+5. Test the functions encode/decode.
