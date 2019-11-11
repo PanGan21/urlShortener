@@ -9,10 +9,3 @@ services:
       - /usr/app/node_modules
     ports:
       - "3000:3000"
-
-  mongodb:
-    container_name: url-shortener-db
-    image: mongo:4.1
-    ports:
-      - "27017:27017"
-      - "28017:28017"
