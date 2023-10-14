@@ -20,7 +20,7 @@
   "homepage": "https://github.com/PanGan21/urlShortener#readme",
   "dependencies": {
     "config": "^3.2.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jest": "^24.9.0",
     "mongoose": "^5.7.9",
     "request": "^2.88.0"
